@@ -1,3 +1,5 @@
+// QUICK FIND. N2 quadratic
+
 const ids = [1, 1, 3, 4, 5];
 let newIds = [...ids];
 
@@ -9,6 +11,10 @@ const union = (p, q) => {
     // find all pId and change to qId
     if (ids[index] === pId) newIds[index] = qId;
   }
+};
+
+const isConnected = (p, q) => {
+  return ids[p] === ids[q];
 };
 
 union(2, 4); // newIds = [1, 1, 5, 4, 5]
